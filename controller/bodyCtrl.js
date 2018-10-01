@@ -1,4 +1,4 @@
-angular.module("MyApp").controller('bodyCtrl', function($scope, $mdDialog) {
+angular.module("MyApp").controller('bodyCtrl',['$scope', '$mdDialog', function($scope, $mdDialog) {
     $scope.name = "My First App";
     $scope.inputValue = "";
 
@@ -20,4 +20,4 @@ angular.module("MyApp").controller('bodyCtrl', function($scope, $mdDialog) {
             $scope.status = 'You didn\'t name your dog.';
         });
     };
-});
+}]);

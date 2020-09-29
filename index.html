@@ -1,61 +1,13 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Home Page</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/style/style.css">
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
-        
-
-    </head>
-    <body ng-app="MyApp">
-        <div class="header" ng-controller="ToolBarCtrl">
-            
-            <md-toolbar class="md-padding">
-                <h1>Welcome to my website!  asdfasdfasdf</h1>
-                <md-button>{{hellworld}}</md-button>
-            </md-toolbar>
-            
-            <p>test</p>
-        </div>
-        <div class="body" ng-controller="bodyCtrl">
-            <h2>My name is John San Diego. I'm a software developer. Thank you for checking out my website</h2>
-            <p>I'm a student at University of Maine pursuing a B.S. Degree in Computer Science. As a programmer, I'm experienced in Java, C#, C, Python, Ruby, and Lisp. As a 3D artist, I'm experienced in Autodesk Maya, Photoshop, and Unity Engine. 
-
-            Currently, I am working as a Software Developer/3D Artist for the Virtual Environment and Multimodal Interaction (VEMI) Laboratory. My role as a software developer is to create virtual interactive worlds to facilitate research studies currently in development in the lab. 
-
-            Colleagues know me as a hard working, highly creative and humble software developer/3D artist. I never try to impose my ideas on others. Instead, I spend a lot of time listening and collaborating with others about ideas and come up with compromise. I often work well alone, but team collaboration shows me the best. </p>
-            
-            <p>Under Development. More to come soon....</p>
-            <md-button class="md-primary md-raised" ng-click="openDialog()"   >
-                    Prompt Dialog {{name}}
-            </md-button>
-            
-            <img src="/img/512px-HTML5_logo_and_wordmark.svg.png"/>
-            <img src="/img/CSS3_logo_and_wordmark.svg.png"/>
-            <img src="/img/512px-JavaScript-logo.png"/>
-            <img src="/img/jquery-mark-light.gif"/>
-            <img src="/img/angular.png"/>
-            <img src="/img/csharpLogo.png"/>
-            <img src="/img/htc-vive-logo.png"/>
-            <img src="/img/Unity_Technologies_logo.svg.png"/>
-        </div>
-        <div class="footer">
-            <div class="footer-nav">
-            
-            </div>
-        </div>
-        <!-- Angular Material requires Angular.js Libraries -->
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
-
-      <!-- Angular Material Library -->
-      <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
-      <script src="/controller/app.js"></script>
-      <script src="/controller/toolbarCtrl.js"></script>
-      <script src="/controller/bodyCtrl.js"></script>
-    </body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SampleApp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+</body>
 </html>

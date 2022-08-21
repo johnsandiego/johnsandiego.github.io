@@ -1,7 +1,11 @@
 .app-toolbar{
     display: flex;
-
+    background: #3f51b5;
     .example-spacer{
         flex: 1 1 auto;
+    }
+
+    .text-color{
+        color: white;
     }
 }

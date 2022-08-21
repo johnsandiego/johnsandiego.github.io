@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { DataTransferService } from '../data-transfer.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -16,14 +17,24 @@ export class SidenavComponent {
       shareReplay()
     );
 
-    // Create observer object
-    myObserver = {
-      next: (x: number) => console.log('Observer got a next value: ' + x),
-      error: (err: Error) => console.error('Observer got an error: ' + err),
-      complete: () => console.log('Observer got a complete notification'),
-    };
+    subscription: Subscription;
+    messages: any[] = [];
+    isOpened: boolean = false;
 
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private messageService: DataTransferService) {
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+    // subscribe to home component messages
+    this.subscription = this.messageService.getMessage().subscribe(message => {
+      if (message) {
+        if(this.isOpened){
+          this.isOpened = false;
+        }else{
+          this.isOpened = true;
+        }
+      }
+    });
+  }
 
 }

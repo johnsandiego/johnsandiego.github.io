@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { of } from 'rxjs';
+import { DataTransferService } from '../data-transfer.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -8,7 +9,7 @@ import { of } from 'rxjs';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private messageService: DataTransferService) { }
 
   ngOnInit(): void {
     // Create simple observable that emits three values
@@ -21,7 +22,8 @@ export class ToolbarComponent implements OnInit {
   }
 
   openSidenav(): void{
-    
+    console.log("menu ")
+    this.messageService.sendMessage(true);
   }
 
 }

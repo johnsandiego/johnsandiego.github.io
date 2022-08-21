@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class DataTransferService {
   private subject = new Subject<any>();
-  
-  sendNumber(number: number): void{
-    this.subject.next({text: number});
+
+  sendMessage(message: boolean) {
+      this.subject.next({ text: message });
   }
 
-  getNumber(): Observable<any>{
-    return this.subject.asObservable();
+  getMessage(): Observable<boolean> {
+      return this.subject.asObservable();
   }
 }

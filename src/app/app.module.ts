@@ -14,12 +14,16 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { ContentComponent } from './content/content.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    SidenavComponent
+    SidenavComponent,
+    ContentComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,13 @@
-<p>content works!</p>
+<div class="content-container">
+    <mat-card class="create-training">
+        <button 
+        mat-fab color="primary" 
+        (click)="createNewTrainingSchedule()"
+        matTooltip="Create a new training schedule">
+            <mat-icon>add</mat-icon>
+        </button>
+    </mat-card>
+    <mat-card class="training-schedule-container">
+            <app-blank-schedule></app-blank-schedule>
+    </mat-card>
+</div>

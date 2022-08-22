@@ -12,4 +12,10 @@ export class ContentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * this function will create a new shell of a training schedule
+   */
+  createNewTrainingSchedule(): void{
+    
+  }
 }

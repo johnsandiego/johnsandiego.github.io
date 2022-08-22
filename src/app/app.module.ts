@@ -16,6 +16,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { ContentComponent } from './content/content.component';
 import { AboutComponent } from './about/about.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { BlankScheduleComponent } from './blank-schedule/blank-schedule.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +28,8 @@ import { AboutComponent } from './about/about.component';
     ToolbarComponent,
     SidenavComponent,
     ContentComponent,
-    AboutComponent
+    AboutComponent,
+    BlankScheduleComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +40,10 @@ import { AboutComponent } from './about/about.component';
     LayoutModule,
     MatButtonModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatTooltipModule,
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

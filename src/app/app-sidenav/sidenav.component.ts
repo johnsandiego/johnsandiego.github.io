@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable, Subscription } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
-import { DataTransferService } from '../data-transfer.service';
+import { component_name, DataTransferService } from '../data-transfer.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -27,7 +27,7 @@ export class SidenavComponent {
 
     // subscribe to home component messages
     this.subscription = this.messageService.getMessage().subscribe(message => {
-      if (message) {
+      if (message === component_name.pregenerate) {
         if(this.isOpened){
           this.isOpened = false;
         }else{

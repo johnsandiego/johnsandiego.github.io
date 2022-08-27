@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { of } from 'rxjs';
-import { DataTransferService } from '../data-transfer.service';
+import { component_name, DataTransferService } from '../data-transfer.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -23,7 +23,7 @@ export class ToolbarComponent implements OnInit {
 
   openSidenav(): void{
     console.log("menu ")
-    this.messageService.sendMessage(true);
+    this.messageService.sendMessage(component_name.pregenerate);
   }
 
 }

@@ -6,6 +6,17 @@
         matTooltip="Create a new training schedule">
             <mat-icon>add</mat-icon>
         </button>
+        <div *ngFor="let item of scheduleShells">
+            <mat-form-field appearance="standard">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Name of Schedule"/>
+            </mat-form-field>
+            <mat-form-field appearance="standard">
+                <mat-label>Type</mat-label>
+                <input matInput placeholder="Type of Schedule"/>
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="generateTrainingSchedule()">Generate</button>
+        </div>
     </mat-card>
     <mat-card class="training-schedule-container">
             <app-blank-schedule></app-blank-schedule>

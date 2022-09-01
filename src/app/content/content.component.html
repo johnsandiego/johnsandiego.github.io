@@ -1,24 +1,41 @@
 <div class="content-container">
-    <mat-card class="create-training">
-        <button 
-        mat-fab color="primary" 
-        (click)="createNewTrainingSchedule()"
-        matTooltip="Create a new training schedule">
-            <mat-icon>add</mat-icon>
-        </button>
-        <div *ngFor="let item of scheduleShells">
-            <mat-form-field appearance="standard">
-                <mat-label>Name</mat-label>
-                <input matInput placeholder="Name of Schedule"/>
-            </mat-form-field>
-            <mat-form-field appearance="standard">
-                <mat-label>Type</mat-label>
-                <input matInput placeholder="Type of Schedule"/>
-            </mat-form-field>
-            <button mat-raised-button color="primary" (click)="generateTrainingSchedule()">Generate</button>
-        </div>
-    </mat-card>
+    <div>
+        <mat-card class="create-training">
+            <button 
+            mat-fab color="primary" 
+            (click)="createNewTrainingSchedule()"
+            matTooltip="Create a new training schedule">
+                <mat-icon>add</mat-icon>
+            </button>
+            <span><h2>Begin</h2></span>
+                <div  *ngFor="let item of scheduleShells">
+                    <mat-form-field  appearance="standard">
+                        <mat-label>Name</mat-label>
+                        <input matInput placeholder="Name of Schedule"/>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Training Type</mat-label>
+                        <mat-select (ngmodel)="selectedValue" name="food">
+                            <mat-option *ngFor="let food of trainings" [value]="food.TrainingArea">
+                            {{food.Name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <button mat-raised-button color="primary" (click)="generateTrainingSchedule()">Generate</button>
+                </div>
+        </mat-card>
+        <mat-card class="download-training">
+            <button 
+                mat-fab color="primary" 
+                (click)="downloadTraining()"
+                matTooltip="Download training schedule">
+                <mat-icon>download</mat-icon>
+            </button>
+            <span><h2>Download</h2></span>
+        </mat-card>
+    </div>
     <mat-card class="training-schedule-container">
-            <app-blank-schedule></app-blank-schedule>
+            <app-blank-schedule id="training-schedule"></app-blank-schedule>
     </mat-card>
+
 </div>
